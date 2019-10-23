@@ -1,0 +1,83 @@
+body {
+    background: coral;
+}
+
+a:link {
+    color:green;
+}
+
+a:visited {
+    color:green;
+}
+
+#banner {
+    height:160px;
+    background:green;
+    color:white;
+    font-size:140px;
+}
+
+#menuBar {
+    font-size:17px;
+    float:right;
+    color:white;
+    background:lightblue;
+    margin-top:50px;
+}
+
+#menuBar .menuButton {
+    width:150px;
+    background:orange;
+    border: 5px solid black;
+    border-radius:20px;
+    margin:15px;
+    display:inline-block;
+    text-align:center;
+}
+
+#menuBar .menuButton:hover {
+    background:black;
+    color:white;
+    border: 5px solid white;
+}
+
+#contactsTable {
+    width: 100%;
+    border:2px solid black;
+    margin-top:10px;
+
+}
+#contactsTable .randomIMG {
+    width:400px;
+}
+
+#contactsTable .postDatas {
+    border:2px solid black;
+    width:50%;
+    alignment: center;
+}
+
+#contactsTable .postDatas td {
+    border:2px solid black;
+    width:200px;
+}
+
+.random {
+    width:500px;
+}
+
+.random li {
+    font-size:24px;
+    color:darkred;
+}
+#sampleText {
+    text-align:center;
+    color:red;
+}
+
+#sampleText:hover {
+    color:lightblue;
+    background:olive;
+}
+
+
