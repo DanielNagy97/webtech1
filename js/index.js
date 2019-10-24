@@ -1,7 +1,6 @@
 $(document).ready(function () {
 
-    //$("#content").load("lorem.html");
-    $("#content").load("lorem.html");
+    $("#content").load("home.html");
     $("#carTable").load("carsTable.html");
 
     $.each($(".menuButton"),

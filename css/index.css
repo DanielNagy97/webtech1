@@ -1,44 +1,142 @@
 body {
-    background: coral;
+    background: rgb(216,25,25);
+    font-family: Arial, Helvetica, sans-serif;
+    margin:40px;
+    box-shadow: 0px 34px 24px 12px rgba(0,0,0,0.13);
 }
 
 a:link {
-    color:green;
+    color:black;
+    text-decoration: none;
 }
 
 a:visited {
-    color:green;
+    color:black;
+    text-decoration: none;
+}
+
+#header {
+    position:sticky;
+    border-radius: 10px 10px 0px 0px;
+    height:60px;
+    background:white;
+    color:black;
+    box-shadow: 0px 9px 11px -5px rgba(0,0,0,0.22);
+}
+
+.icon {
+    padding:15px;
+    height:30px;
 }
 
 #banner {
-    height:160px;
-    background:green;
-    color:white;
-    font-size:140px;
+    //
 }
 
 #menuBar {
-    font-size:17px;
+    padding-top: 12px;
+    font-size:16px;
     float:right;
-    color:white;
-    background:lightblue;
-    margin-top:50px;
+
 }
 
 #menuBar .menuButton {
-    width:150px;
-    background:orange;
-    border: 5px solid black;
-    border-radius:20px;
-    margin:15px;
+    width:120px;
+    margin:10px;
     display:inline-block;
     text-align:center;
+    color:black;
 }
 
 #menuBar .menuButton:hover {
-    background:black;
-    color:white;
-    border: 5px solid white;
+    border-bottom: 5px solid rgb(216,25,25);
+    font-weight: bold;
+}
+
+#content {
+    background: white;
+    padding-bottom:40px;
+}
+
+#footer {
+    background: white;
+    box-shadow: 0px -14px 18px -8px rgba(0,0,0,0.12);
+    height:70px;
+    border-radius: 0px 0px 10px 10px;
+    padding:10px;
+}
+
+#slideShow {
+
+}
+
+#slideShow .title {
+    padding-top: 30px;
+    padding-bottom: 70px;
+    font-weight: bold;
+    font-size:32px;
+    text-align: center;
+}
+
+#slideShow .description {
+    padding-top: 5px;
+    font-weight: normal;
+    font-size:16px;
+    color:gray;
+    text-align: center;
+}
+
+#slideShow .pictureBox {
+    background: rgb(216,25,25);
+    height:300px;
+    box-shadow: 0px -14px 18px -8px rgba(0,0,0,0.12);
+    padding-left:15%;
+    padding-right:15%;
+}
+
+#pictureBoxTable {
+    position: relative;
+    top:-100px;
+    width:100%;
+    //border:2px solid black;
+}
+#pictureBoxTable .carPic {
+    width:70%;
+}
+
+#pictureBoxTable .pbText{
+    vertical-align: top;
+    text-align: center;
+    background:white;
+    padding:10px;
+    box-shadow: 0px 0px 26px 15px rgba(0,0,0,0.16);
+}
+
+#pictureBoxTable .pbText .name{
+    font-size: 24px;
+    font-weight: bold;
+}
+
+#pictureBoxTable .pbText .manufacturer{
+    color:grey
+}
+
+#pictureBoxTable .pbText .consumption{
+    font-style: italic;
+}
+
+
+#carHome {
+    width:100%;
+}
+
+#pinup {
+    width:400px;
+    float:right;
+}
+
+#homeText {
+    padding:50px;
 }
 
 #contactsTable {
@@ -72,7 +170,7 @@ a:visited {
 }
 #sampleText {
     text-align:center;
-    color:red;
+    color:rgb(216,25,25);
 }
 
 #sampleText:hover {
