@@ -15,6 +15,7 @@ a:visited {
     text-decoration: none;
 }
 
+
 #header {
     position:sticky;
     border-radius: 10px 10px 0px 0px;
@@ -55,7 +56,7 @@ a:visited {
 
 #content {
     background: white;
-    padding-bottom:40px;
+    margin:0px;
 }
 
 #footer {
@@ -102,6 +103,7 @@ a:visited {
 }
 #pictureBoxTable .carPic {
     width:70%;
+    margin-bottom:200px;
 }
 
 #pictureBoxTable .pbText{
@@ -109,6 +111,7 @@ a:visited {
     text-align: center;
     background:white;
     padding:10px;
+    margin-top:100px;
     box-shadow: 0px 0px 26px 15px rgba(0,0,0,0.16);
 }
 
@@ -125,57 +128,126 @@ a:visited {
     font-style: italic;
 }
 
+#pictureBoxTable .viewAll{
+    font-weight: bold;
+    color: white;
+    text-align: center;
+}
 
 #carHome {
     width:100%;
 }
 
 #pinup {
-    width:400px;
+    width:35%;
     float:right;
+    margin:0px 0px 10px 10px;
 }
 
 #homeText {
     padding:50px;
+    text-align:justify;
 }
 
-#contactsTable {
-    width: 100%;
-    border:2px solid black;
-    margin-top:10px;
-
+#carForm{
+    background:white;
+    margin: 20px 30px 70px 30px;
+    padding: 10px;
+    box-shadow: 0px 0px 26px 15px rgba(0,0,0,0.16);
+    width:350px;
 }
-#contactsTable .randomIMG {
+
+#carsTable {
+    width:100%;
+    padding:50px;
+}
+
+#carsTable th {
+    background-color: rgb(216,25,25);
+    color: white;
+}
+
+#carsTable td, th {
+    text-align:left;
+    padding: 15px;
+}
+
+#carsTable tr:hover {background-color: #f5f5f5;}
+
+#carsTable tr:nth-child(even) {background-color: #f2f2f2;}
+
+
+
+
+.formBox {
+    float:left;
+    background: rgb(216,25,25);
+    border-radius: 0px 0px 10px 10px;
+    margin-left:50px;
+}
+
+#manufacturersForm{
+    background:white;
+    margin: 20px 30px 70px 30px;
+    padding: 10px;
+    box-shadow: 0px 0px 26px 15px rgba(0,0,0,0.16);
+    width:350px;
+}
+.formTitle {
+    color:white;
+    font-size: 24px;
+    font-weight: bold;
+    text-align: center;
+    margin-top:50px;
+}
+
+#factoryPic {
+    float:right;
+    width:40%;
+}
+
+
+
+.pageTitle {
+    float:right;
+    font-size:64px;
+    font-weigth:bold;
+    padding-right:50px;
+    padding-top:50px;
+    text-align:right;
+}
+
+#factory {
+    width:300px;
+}
+
+#carClipArt {
+    margin-top:100px;
+
     width:400px;
 }
 
-#contactsTable .postDatas {
-    border:2px solid black;
-    width:50%;
-    alignment: center;
+#manufacturersTable {
+    width:100%;
+    padding:50px;
 }
 
-#contactsTable .postDatas td {
-    border:2px solid black;
-    width:200px;
+#manufacturersTable th {
+    background-color: rgb(216,25,25);
+    color: white;
 }
 
-.random {
-    width:500px;
+#manufacturersTable td, th {
+    text-align:left;
+    padding: 15px;
 }
 
-.random li {
-    font-size:24px;
-    color:darkred;
-}
-#sampleText {
+#manufacturersTable tr:hover {background-color: #f5f5f5;}
+
+#manufacturersTable tr:nth-child(even) {background-color: #f2f2f2;}
+
+
+#map {
     text-align:center;
-    color:rgb(216,25,25);
 }
-
-#sampleText:hover {
-    color:lightblue;
-    background:olive;
-}
-
 
