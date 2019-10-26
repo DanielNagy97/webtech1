@@ -50,3 +50,56 @@ function openCar(manufacturer){
         console.log(data);
     })
 }
+
+var slideIndex = 1;
+
+function currentSlide(n) {
+    showSlides(slideIndex = n);
+}
+
+function showSlides(n){
+
+    $.getJSON("cars", function(data){
+
+
+        $(".pbText .name").html(data[n].name);
+        $(".pbText .manufacturer").html(data[n].manufacturer);
+        $(".pbText .consumption").html(data[n].consumption);
+        $(".viewAll").html("View all "+data[n].manufacturer+" >>")
+        $("#carHome").attr("src","images/car"+n+".png")
+    })
+}
+
+
+
+
+
+//$("button").click(function (){
+
+//$("#banner").empty();
+//$("#content").append("<p> Hozzáadott tartalom 0</p>")
+//$("#home").attr("href","hvg.hu");
+//alert(document.getElementById("banner").innerText); ehelyett
+//alert($("#banner").text());
+
+//$("#content").css("color","red")
+//    .slideUp(2000).slideDown(2000);
+//})
+
+//$("button").click(function (){
+//    $("p").hide(500, function(){
+//       alert("Eltűnt a paragrafus!")
+//   });
+//}// )
+
+
+//$("button").click(function (){
+//    $("p").toggle(500);
+//})
+//$("p").dblclick(function () {
+//   $(this).hide(1000);
+//});
+//$("p").click(function () {
+//    $(this).hide();
+//});
+
