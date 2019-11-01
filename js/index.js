@@ -58,20 +58,19 @@ function currentSlide(n) {
 }
 
 function showSlides(n){
-
     $.getJSON("cars", function(data){
-
-
+        $(".pbText").slideUp().slideDown();
         $(".pbText .name").html(data[n].name);
         $(".pbText .manufacturer").html(data[n].manufacturer);
         $(".pbText .consumption").html(data[n].consumption);
-        $(".viewAll").html("View all "+data[n].manufacturer+" >>")
-        $("#carHome").attr("src","images/car"+n+".png")
+        $(".viewAll").html("View all "+data[n].manufacturer+" >>");
+        $("#carHome").attr("src","images/car"+n+".png");
     })
 }
 
-
-
+function showForm() {
+    $("form").slideToggle();
+}
 
 
 //$("button").click(function (){
