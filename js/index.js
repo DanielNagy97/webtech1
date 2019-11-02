@@ -67,7 +67,16 @@ function showSlides(n){
     })
 }
 
-function showForm() {
-    $("form").slideToggle();
+function showForm(form) {
+    $("#"+form).slideToggle();
 }
 
+function giveMessage(errorMsg) {
+    var msg = $('<div id="message"></div>');
+    $(msg).append("<p>"+errorMsg+"</p>");
+    $("#content").append(msg);
+    $("#message").slideDown(500).delay(2000).slideUp(500);
+    setTimeout(function() {
+        $('#message').remove();
+    }, 3000);
+}
