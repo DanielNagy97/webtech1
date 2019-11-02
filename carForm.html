@@ -1,12 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <script>
     $(document).ready(function () {
         loadCarsTable();
         $.getJSON("manufacturerNames", function(data) {
             $.each(data, function(key, value){
-                $("#selectManufacturer").append('<option value=' + value + '>' + value + '</option>')
+                $("#selectManufacturer").append('<option value="' + value + '">' + value + '</option>')
             })
         })
     })
@@ -47,7 +46,7 @@
         var name = $( "input[name='name']" ).val();
         var consumption = $( "input[name='consumption']" ).val();
         var color = $( "input[name='color']" ).val();
-        var manufacturer = $( "input[name='manufacturer']" ).val();
+        var manufacturer = $("#selectManufacturer").val();
         var available = $( "input[name='available']" ).val();
         var year = $( "input[name='year']" ).val();
         var horsepower = $( "input[name='horsepower']" ).val();
@@ -67,7 +66,7 @@
             $.post("addCar",car)
                 .done(function(){
                     giveMessage("The car: "+name+" successfully added!");
-                    $("#carsTable").empty();
+                    $("#carsTable").remove();
                     loadCarsTable();
                 })
                 .fail(function(){
@@ -75,12 +74,7 @@
                 })
         }
     }
-
-
-
-
 </script>
-
 
 <div id="carFormBanner">
     <div class="formDiv">
@@ -95,21 +89,18 @@
                                 <input type="text" name="name" required="required" autofocus value="Name">
                             </td>
                         </tr>
-
                         <tr>
                             <td>Consumption: </td>
                             <td>
                                 <input type="text" name="consumption" required="required" value="7/100km">
                             </td>
                         </tr>
-
                         <tr>
                             <td>Color: </td>
                             <td>
                                 <input type="text" name="color" required="required" value="Black">
                             </td>
                         </tr>
-
                         <tr>
                             <td>Manufacturer:</td>
                             <td>
@@ -117,45 +108,32 @@
                                 </select>
                             </td>
                         </tr>
-
-                        <td>Available:</td>
-                        <td>
-                            <input type="number" name="available" required="required" value="1">
-                        </td>
+                            <td>Available:</td>
+                            <td>
+                                <input type="number" name="available" required="required" value="1">
+                            </td>
                         </tr>
-
                         </tr>
-
-                        <td>Year:</td>
-                        <td>
-                            <input type="text" name="year" required="required" value="2000">
-                        </td>
+                            <td>Year:</td>
+                            <td>
+                                <input type="text" name="year" required="required" value="2000">
+                            </td>
                         </tr>
-
                         </tr>
-
-                        <td>Horsepower:</td>
-                        <td>
-                            <input type="number" name="horsepower" required="required" value="100">
-                        </td>
+                            <td>Horsepower:</td>
+                            <td>
+                                <input type="number" name="horsepower" required="required" value="100">
+                            </td>
                         </tr>
-
                         <tr>
                             <td>
                                 <button onclick="addCar()">Add New Car</button>
                             </td>
                         </tr>
-
                     </table>
                 </div>
             </td>
         </table>
-
     </div>
-
-
 </div>
-
 </html>
-
-

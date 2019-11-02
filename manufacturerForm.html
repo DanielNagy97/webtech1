@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <script>
     $(document).ready(function () {
         loadManufacturersTable();
@@ -46,7 +45,7 @@
             $.post("addManufacturers",manufacturer)
                 .done(function(){
                     giveMessage("The manufacturer: "+name+" successfully added!");
-                    $("#manufacturersTable").empty();
+                    $("#manufacturersTable").remove();
                     loadManufacturersTable();
                 })
                 .fail(function(){
@@ -92,5 +91,5 @@
         </table>
     </div>
 </div>
-
+<div id="selectedCars"></div>
 </html>
