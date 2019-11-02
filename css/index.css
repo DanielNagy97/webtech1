@@ -15,9 +15,13 @@ a:visited {
     text-decoration: none;
 }
 
+li {
+    padding-bottom: 20px;
+}
 
 #header {
-    position:sticky;
+    position:relative;
+    z-index: 99;
     border-radius: 10px 10px 0px 0px;
     height:60px;
     background:white;
@@ -30,15 +34,10 @@ a:visited {
     height:30px;
 }
 
-#banner {
-    //
-}
-
 #menuBar {
     padding-top: 12px;
     font-size:16px;
     float:right;
-
 }
 
 #menuBar .menuButton {
@@ -60,15 +59,13 @@ a:visited {
 }
 
 #footer {
+    position:relative;
+    z-index: 99;
     background: white;
     box-shadow: 0px -14px 18px -8px rgba(0,0,0,0.12);
     height:70px;
     border-radius: 0px 0px 10px 10px;
     padding:10px;
-}
-
-#slideShow {
-
 }
 
 #slideShow .title {
@@ -99,8 +96,8 @@ a:visited {
     position: relative;
     top:-100px;
     width:100%;
-    //border:2px solid black;
 }
+
 #pictureBoxTable .carPic {
     width:70%;
     margin-bottom:200px;
@@ -138,6 +135,20 @@ a:visited {
     width:100%;
 }
 
+.dot {
+    cursor: pointer;
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+}
+
+.active, .dot:hover {
+    background-color: #717171;
+}
+
 #pinup {
     width:35%;
     float:right;
@@ -173,9 +184,13 @@ a:visited {
     padding: 15px;
 }
 
-#carsTable tr:hover {background-color: #f5f5f5;}
+#carsTable tr:hover {
+    background-color: #f5f5f5;
+}
 
-#carsTable tr:nth-child(even) {background-color: #f2f2f2;}
+#carsTable tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
 
 
 #manufacturersFormBanner{
@@ -196,7 +211,6 @@ a:visited {
     background-size: cover;
 }
 
-
 .formDiv{
     position:absolute;
     top: 0;
@@ -204,8 +218,6 @@ a:visited {
     width: 200px;
     height: 100px;
 }
-
-
 
 .formBox {
     background: rgb(216,25,25);
@@ -222,6 +234,7 @@ a:visited {
     width:350px;
     display: none;
 }
+
 .formTitle {
     color:white;
     font-size: 24px;
@@ -230,8 +243,6 @@ a:visited {
     margin-top:20px;
     margin-bottom:20px;
 }
-
-
 
 #manufacturersTable {
     width:100%;
@@ -248,28 +259,67 @@ a:visited {
     padding: 15px;
 }
 
-#manufacturersTable tr:hover {background-color: #f5f5f5;}
+#manufacturersTable tr:hover {
+    background-color: #f5f5f5;
+}
 
-#manufacturersTable tr:nth-child(even) {background-color: #f2f2f2;}
+#manufacturersTable tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+
+#contactsBanner {
+    position:relative;
+    width: 100%;
+    height: 650px;
+    background-image: url("../images/harold1.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.contactsDiv {
+    position:absolute;
+    top: 0;
+    left: 20px;
+    width: 200px;
+    height: 100px;
+}
+
+#contactsTitle {
+    text-align: center;
+    color: white;
+    font-weight: bold;
+    font-size: 32px;
+    margin-top:20px;
+}
+
+#contactsInformation {
+    padding: 20px;
+    color: white;
+    font-weight: bold;
+}
+#contactsInformation table{
+    width: 100%;
+}
+
+#contactsInformation td{
+    width:50%;
+    padding:5px;
+}
 
 
 #map {
     text-align:center;
+    padding: 20px;
+    padding-top: 0px;
 }
 
+#map iframe {
+    width:100%;
+    height:300px;
+    scrolling:"no";
+    border: 1px solid black;
+    margin:0;
 
-.dot {
-    cursor: pointer;
-    height: 15px;
-    width: 15px;
-    margin: 0 2px;
-    background-color: #bbb;
-    border-radius: 50%;
-    display: inline-block;
+
 }
-
-
-.active, .dot:hover {
-    background-color: #717171;
-}
-

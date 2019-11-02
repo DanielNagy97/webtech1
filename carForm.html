@@ -1,8 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
-
-
 <div id="carFormBanner">
     <div class="formDiv">
         <table class="formBox">
@@ -31,14 +28,10 @@
                             </td>
                         </tr>
 
-
-                        <!--manufacturerNames-->
                         <tr>
                             <td>Manufacturer:</td>
                             <td>
-                                <select name="manufacturer" required="required">
-                                    <option value="Toyota">Toyota</option>
-                                    <option value="KIA">KIA</option>
+                                <select id="selectManufacturer" name="manufacturer" required="required">
                                 </select>
                             </td>
                         </tr>
@@ -76,9 +69,6 @@
             </td>
         </table>
 
-
-
-
     </div>
 
 
@@ -86,12 +76,14 @@
 
 
 
-
-
-
 <script>
-    $.getJSON("cars", function(data) {
+    $.getJSON("manufacturerNames", function(data) {
+        $.each(data, function(key, value){
+            $("#selectManufacturer").append('<option value=' + value + '>' + value + '</option>')
+        })
+    })
 
+    $.getJSON("cars", function(data) {
         var table = $('<table id="carsTable"></table>');
         $(table).append('<tr><th>Name</th><th>Consumption</th><th>Color</th><th>Manufacturer</th><th>Available</th><th>Year</th><th>Horsepower</th></tr>');
 

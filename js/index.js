@@ -1,7 +1,6 @@
 $(document).ready(function () {
 
     $("#content").load("home.html");
-    $("#carTable").load("carsTable.html");
 
     $.each($(".menuButton"),
         function(mbIndex, mbValue){
@@ -71,34 +70,4 @@ function showSlides(n){
 function showForm() {
     $("form").slideToggle();
 }
-
-
-//$("button").click(function (){
-
-//$("#banner").empty();
-//$("#content").append("<p> Hozzáadott tartalom 0</p>")
-//$("#home").attr("href","hvg.hu");
-//alert(document.getElementById("banner").innerText); ehelyett
-//alert($("#banner").text());
-
-//$("#content").css("color","red")
-//    .slideUp(2000).slideDown(2000);
-//})
-
-//$("button").click(function (){
-//    $("p").hide(500, function(){
-//       alert("Eltűnt a paragrafus!")
-//   });
-//}// )
-
-
-//$("button").click(function (){
-//    $("p").toggle(500);
-//})
-//$("p").dblclick(function () {
-//   $(this).hide(1000);
-//});
-//$("p").click(function () {
-//    $(this).hide();
-//});
 
