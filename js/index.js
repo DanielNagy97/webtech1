@@ -41,7 +41,9 @@ function openCar(manufacturer){
                 $(row).append(horsepowerCell);
                 $(table).append(row);
             })
+            $("#content").append($('<div id="selectedCars"></div>'))
             $("#selectedCars").empty();
+            $("#selectedCars").append('<p onclick="closeCars()">x</p>');
             $("#selectedCars").append('<h2>' + manufacturer + ' car(s): </h2>');
             $("#selectedCars").append(table);
         }
@@ -52,6 +54,10 @@ function openCar(manufacturer){
     }).error(function(data){
         console.log(data);
     })
+}
+
+function closeCars() {
+    $("#selectedCars").remove();
 }
 
 var slideIndex = 1;
