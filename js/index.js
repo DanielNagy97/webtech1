@@ -18,6 +18,7 @@ $(document).ready(function () {
 
 function openCar(manufacturer){
     document.cookie="name=" + manufacturer;
+    $("#selectedCars").remove();
     $.getJSON("manufacturer", function(data){
         if(data.length > 0) {
             var table = $('<table id="selectedCarsTable"></table>');
@@ -41,15 +42,19 @@ function openCar(manufacturer){
                 $(row).append(horsepowerCell);
                 $(table).append(row);
             })
-            $("#content").append($('<div id="selectedCars"></div>'))
+            $("#content").append($('<div id="selectedCars"></div>'));
             $("#selectedCars").empty();
-            $("#selectedCars").append('<p onclick="closeCars()">x</p>');
+            $("#selectedCars").append('<div id="closeCars" onclick="closeCars()">x</div>');
             $("#selectedCars").append('<h2>' + manufacturer + ' car(s): </h2>');
             $("#selectedCars").append(table);
+            $("#selectedCars").slideDown(500);
         }
         else{
+            $("#content").append($('<div id="selectedCars"></div>'))
             $("#selectedCars").empty();
-            $("#selectedCars").append('<h2>There are no ' + manufacturer + ' cars: </h2>');
+            $("#selectedCars").append('<div id="closeCars" onclick="closeCars()">x</div>');
+            $("#selectedCars").append('<h2>There are no ' + manufacturer + ' cars! </h2>');
+            $("#selectedCars").slideDown(500);
         }
     }).error(function(data){
         console.log(data);
@@ -57,7 +62,10 @@ function openCar(manufacturer){
 }
 
 function closeCars() {
-    $("#selectedCars").remove();
+    $("#selectedCars").slideUp(500);
+    setTimeout(function() {
+        $("#selectedCars").remove();
+    }, 500);
 }
 
 var slideIndex = 1;
@@ -68,11 +76,16 @@ function currentSlide(n) {
 
 function showSlides(n){
     $.getJSON("cars", function(data){
-        $(".pbText").slideUp().slideDown();
-        $(".pbText .name").html(data[n].name);
-        $(".pbText .manufacturer").html(data[n].manufacturer);
-        $(".pbText .consumption").html(data[n].consumption);
-        $("#carHome").attr("src","images/car"+n+".png");
+        $(".pbText").slideUp(500);
+        $("#carHome").fadeOut(500);
+        setTimeout(function() {
+            $(".pbText .name").html(data[n].name);
+            $(".pbText .manufacturer").html(data[n].manufacturer);
+            $(".pbText .consumption").html(data[n].consumption);
+            $("#carHome").attr("src","images/car"+n+".png");
+        }, 500);
+        $(".pbText").slideDown();
+        $("#carHome").fadeIn(500);
     });
 }
 
