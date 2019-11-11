@@ -68,12 +68,6 @@ function closeCars() {
     }, 500);
 }
 
-var slideIndex = 1;
-
-function currentSlide(n) {
-    showSlides(slideIndex = n);
-}
-
 function showSlides(n){
     $.getJSON("cars", function(data){
         $(".pbText").slideUp(500);
